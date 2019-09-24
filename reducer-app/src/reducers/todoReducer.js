@@ -14,10 +14,20 @@ export const initialState = [
         completed: false,
         id: '0275630234'
     }
-]
+];
+
+export const editingState = {
+    editing: false
+}
 
 export const todoReducer = (state, action) => {
     switch(action.type) {
+        case "TOGGLE_EDITING": {
+            return {
+                ...state,
+                editing: !editingState.editing
+            }
+        }
         default:
         return state;
     }

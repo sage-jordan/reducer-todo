@@ -16,7 +16,7 @@ export const initialState = [
     }
 ];
 
-export const editingState = {
+export const editing = {
     editing: false
 }
 
@@ -25,7 +25,7 @@ export const todoReducer = (state, action) => {
         case "TOGGLE_EDITING": {
             return {
                 ...state,
-                editing: !editingState.editing
+                editing: !editing.editing
             }
         }
         default:

@@ -12,8 +12,9 @@ export default function AddTodo (handleChange, onSubmit) {
                 name="addTodoText"
                 value={addTodoText}
                 onChange={handleChange}
-                onSubmit={onSubmit}
+                onSubmit={onSubmit(addTodoText)}
             />
+            <button onClick={onSubmit(addTodoText)}>Add Todo</button>
         </div>
     )
 }

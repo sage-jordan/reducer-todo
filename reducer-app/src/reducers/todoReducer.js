@@ -16,10 +16,6 @@ export const initialState = [
     }
 ];
 
-export const editing = {
-    editing: false
-}
-
 export const todoReducer = (state, action) => {
     switch(action.type) {
         case "TOGGLE_EDITING": {

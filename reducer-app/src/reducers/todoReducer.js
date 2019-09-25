@@ -18,10 +18,14 @@ export const initialState = [
 
 export const todoReducer = (state, action) => {
     switch(action.type) {
-        case "TOGGLE_EDITING": {
+        case "ADD_TODO": {
             return {
                 ...state,
-                editing: !editing.editing
+                {
+                    item: action.payload
+                    completed: false
+                    id: `${new Date()}`
+                }
             }
         }
         default:

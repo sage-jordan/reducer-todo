@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 
-export default function AddTodo () {
+export default function AddTodo (handleChange, onSubmit) {
     const [addTodoText, setAddTodoText] = useState();
 
-    const handleChange = e => {
-        setAddTodoText(e.target.value);
-    };
 
     return (
         <div className='add-todo'>
@@ -15,6 +12,7 @@ export default function AddTodo () {
                 name="addTodoText"
                 value={addTodoText}
                 onChange={handleChange}
+                onSubmit={onSubmit}
             />
         </div>
     )
